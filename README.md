@@ -3,6 +3,13 @@ This indicates who joined your bot server. How many people the person who brough
 # Information
 
 
+## Contains
+- [x] Bonus Command
+- [x] Top Command
+- [x] Me Command
+- [x] Options Command
+- [x] Reward Command
+- [ ] Reset Data Command
 
 # Setup
 > **Open PowerShell** or  **CMD** 
@@ -13,7 +20,7 @@ This indicates who joined your bot server. How many people the person who brough
 
 ![](https://resimler.aloshaplugins.com/resim/ui484umb6c.png?raw=true)
 
-> write the command `cd copied/location`. 
+> Write the command `cd copied/location`. 
 
 ![](https://resimler.aloshaplugins.com/resim/quzzwrqbnt.png?raw=true)
 
