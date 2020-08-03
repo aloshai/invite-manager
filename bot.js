@@ -50,8 +50,9 @@ client.on("guildMemberAdd", (member) => {
                 regular = db.add(`invites.${invite.inviter.id}.regular`, 1);
             }
             var im = guild.member(invite.inviter.id);
-            if(im) global.onUpdateInvite(im, guild.id, Number(total + (db.get(`invites.${invite.inviter.id}.bonus`) || 0)));
             bonus = db.get(`invites.${invite.inviter.id}.bonus`);
+            if(im) global.onUpdateInvite(im, guild.id, Number(total + Number(bonus)));
+            
         }
 
         db.set(`invites.${member.id}.isfake`, fake);
