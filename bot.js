@@ -19,7 +19,6 @@ client.on("inviteCreate", (invite) => {
     Invites.set(invite.guild.id, gi);
 });
 client.on("inviteDelete", (invite) => {
-    console.log(invite.code  + " kodu silindi.");
     var gi = Invites.get(invite.guild.id);
     gi.delete(invite.code);
     Invites.set(invite.guild.id, gi);
