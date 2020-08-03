@@ -1,7 +1,8 @@
 This indicates who joined your bot server. How many people the person who brought the member brought, how much they brought in total, how much of it came out, etc. it records and displays situations. You need an invitation race? Is perfect for you!
 
 # Setup
-### ![** Open PowerShell** or  **CMD**](https://resimler.aloshaplugins.com/resim/x0ji7lewur.png?raw=true)
+### ** Open PowerShell** or  **CMD** 
+![](https://resimler.aloshaplugins.com/resim/x0ji7lewur.png?raw=true)
 ### Copy directory location
 ![](https://resimler.aloshaplugins.com/resim/ui484umb6c.png?raw=true)
 ### write the command 'cd copied / location'. ![](https://resimler.aloshaplugins.com/resim/quzzwrqbnt.png?raw=true)
