@@ -35,7 +35,7 @@ client.on("guildMemberAdd", (member) => {
     guild.fetchInvites().then(invites => {
         var invite = invites.find(_i => gi.has(_i.code) && gi.get(_i.code).maxUses != 1 && gi.get(_i.code).uses < _i.uses) || gi.find(_i => !invites.has(_i.code)) || guild.vanityURLCode;
         
-        var content = `${member} is joined the server.`, total = 0, regular = 0, _fake = 0;
+        var content = `${member} is joined the server.`, total = 0, regular = 0, _fake = 0, bonus = 0;
         if(invite == guild.vanityURLCode) content = settings.defaultMessage ? settings.defaultMessage : `-member- is joined the server! But don't know that invitation he came up with. :tada:`;
         else content = settings.welcomeMessage ? settings.welcomeMessage : `The -member-, joined the server using the invitation of the -target-.`;
 
@@ -51,6 +51,7 @@ client.on("guildMemberAdd", (member) => {
             }
             var im = guild.member(invite.inviter.id);
             if(im) global.onUpdateInvite(im, guild.id, Number(total + (db.get(`invites.${invite.inviter.id}.bonus`) || 0)));
+            bonus = db.get(`invites.${invite.inviter.id}.bonus`);
         }
 
         db.set(`invites.${member.id}.isfake`, fake);
@@ -59,7 +60,7 @@ client.on("guildMemberAdd", (member) => {
             content = content
             .replace("-member-", `${member}`)
             .replace("-target-", `${invite.inviter}`)
-            .replace("-total-", `${total}`)
+            .replace("-total-", `${total + bonus}`)
             .replace("-regular-", `${regular}`)
             .replace("-fakecount-", `${_fake}`)
             .replace("-invite-", `${invite && invite.code != undefined ? invite.code : "what is that?"}`)
@@ -71,7 +72,7 @@ client.on("guildMemberAdd", (member) => {
 
 client.on("guildMemberRemove", (member) => {
     const db = new Database("./Servers/" + member.guild.id, "Invites"), settings = new Database("./Servers/" + member.guild.id, "Settings").get("settings") || {};
-    var total = 0, regular = 0, fakecount = 0, channel = member.guild.channels.cache.get(settings.Channel), content = settings.leaveMessage ? settings.leaveMessage : `${member} is left the server.`, data = db.get(`invites.${member.id}`);
+    var total = 0, bonus = 0, regular = 0, fakecount = 0, channel = member.guild.channels.cache.get(settings.Channel), content = settings.leaveMessage ? settings.leaveMessage : `${member} is left the server.`, data = db.get(`invites.${member.id}`);
     if(!data){
         if(channel){
             content = content
@@ -89,12 +90,13 @@ client.on("guildMemberRemove", (member) => {
         regular = db.sub(`invites.${data.inviter}.regular`, 1);
         total = db.sub(`invites.${data.inviter}.total`, 1);
     }
+    if(data.inviter) bonus = db.get(`invites.${invite.inviter.id}.bonus`);
     db.add(`invites.${data.inviter}.leave`, 1);
     if(channel){
         content = content
         .replace("-member-", `${member}`)
         .replace("-target-", `${data.inviter}`)
-        .replace("-total-", `${total}`)
+        .replace("-total-", `${total + bonus}`)
         .replace("-regular-", `${regular}`)
         .replace("-fakecount-", `${fakecount}`)
         .replace("-fake-", `${data.isfake}`);
