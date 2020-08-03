@@ -1,5 +1,5 @@
 # Information
-This indicates who joined your bot server. How many people the person who brought the member brought, how much they brought in total, how much of it came out, etc. it records and displays situations. You need an invitation race? Is perfect for you!
+This bot will show who invited who. It's recording and showing the total count of invitations of an user, how many of them left, etc. Do you need an invitation competition? Just for you!
 
 ## Contains
 - [x] Bonus Command
@@ -39,10 +39,7 @@ This indicates who joined your bot server. How many people the person who brough
 }
 
 
-> Alternative Install
-
-![](https://youtu.be/boe3llBi12I)
-
+> Alternative Install: https://youtu.be/boe3llBi12I
 
 ## 📚 Concats
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/pulls)
