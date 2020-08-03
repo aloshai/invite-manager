@@ -91,6 +91,10 @@ client.on("guildMemberRemove", (member) => {
         total = db.sub(`invites.${data.inviter}.total`, 1);
     }
     if(data.inviter) bonus = db.get(`invites.${invite.inviter.id}.bonus`);
+    
+    var im = member.guild.member(data.inviter)
+    if(im) global.onUpdateInvite(im, member.guild.id, total + bonus);
+    
     db.add(`invites.${data.inviter}.leave`, 1);
     if(channel){
         content = content
@@ -107,7 +111,7 @@ client.on("guildMemberRemove", (member) => {
 
 //#region Reward
 global.onUpdateInvite = (guildMember, guild, total) => {
-    if(!guildMember.manageable) return console.log("dokunamıyom");
+    if(!guildMember.manageable) return;
     const rewards = new Database("./Servers/" + guild, "Rewards").get("rewards") || [];
     if(rewards.length <= 0) return;
     var taken = rewards.filter(reward => reward.Invite > total && guildMember.roles.cache.has(reward.Id));
