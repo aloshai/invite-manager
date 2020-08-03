@@ -46,7 +46,7 @@ This bot will show who invited who. It's recording and showing the total count o
 
 
 
-## 📚 Concats
+## 📚 Contact
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/pulls)
 
 
