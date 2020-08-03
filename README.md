@@ -1,6 +1,10 @@
 # Information
 This bot will show who invited who. It's recording and showing the total count of invitations of an user, how many of them left, etc. Do you need an invitation competition? Just for you!
 
+
+
+> Alternative Install: https://youtu.be/boe3llBi12I
+
 ## Contains
 - [x] Bonus Command
 - [x] Top Command
@@ -8,6 +12,8 @@ This bot will show who invited who. It's recording and showing the total count o
 - [x] Options Command
 - [x] Reward Command
 - [ ] Reset Data Command
+
+
 
 # Setup
 > **Open PowerShell** or  **CMD** 
@@ -39,7 +45,6 @@ This bot will show who invited who. It's recording and showing the total count o
 }
 
 
-> Alternative Install: https://youtu.be/boe3llBi12I
 
 ## 📚 Concats
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/pulls)
