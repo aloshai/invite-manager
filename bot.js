@@ -99,7 +99,7 @@ client.on("guildMemberRemove", (member) => {
     if(channel){
         content = content
         .replace("-member-", `${member}`)
-        .replace("-target-", `${data.inviter}`)
+        .replace("-target-", `${im ? im : data.inviter}`)
         .replace("-total-", `${total + bonus}`)
         .replace("-regular-", `${regular}`)
         .replace("-fakecount-", `${fakecount}`)
