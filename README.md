@@ -1,7 +1,5 @@
-This indicates who joined your bot server. How many people the person who brought the member brought, how much they brought in total, how much of it came out, etc. it records and displays situations. You need an invitation race? Is perfect for you!
-
 # Information
-
+This indicates who joined your bot server. How many people the person who brought the member brought, how much they brought in total, how much of it came out, etc. it records and displays situations. You need an invitation race? Is perfect for you!
 
 ## Contains
 - [x] Bonus Command
