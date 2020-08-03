@@ -5,7 +5,8 @@ This indicates who joined your bot server. How many people the person who brough
 ![](https://resimler.aloshaplugins.com/resim/x0ji7lewur.png?raw=true)
 ### Copy directory location
 ![](https://resimler.aloshaplugins.com/resim/ui484umb6c.png?raw=true)
-### write the command 'cd copied / location'. ![](https://resimler.aloshaplugins.com/resim/quzzwrqbnt.png?raw=true)
+### write the command `cd copied/location`. 
+![](https://resimler.aloshaplugins.com/resim/quzzwrqbnt.png?raw=true)
 ### Type `npm` to install the modules. *Discord if you have trouble just type `npm i discord.js`*
 ![](https://resimler.aloshaplugins.com/resim/rvzrqt9mcm.png?raw=true "")
 ### To run the boat `node .` or `node index.js` write.
