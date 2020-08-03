@@ -33,8 +33,10 @@ This indicates who joined your bot server. How many people the person who brough
 ![](https://resimler.aloshaplugins.com/resim/gdzy93hcqq.png?raw=true "")
 
 
-# Request
+## 📚 Concats
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/pulls)
 
-#### discord.gg/serendia
-#### Discord: `Alosha#0777`
+
+
+## discord.gg/serendia
+## Discord: `Alosha#0777`
