@@ -39,6 +39,11 @@ This indicates who joined your bot server. How many people the person who brough
 }
 
 
+> Alternative Install
+
+![](https://youtu.be/boe3llBi12I)
+
+
 ## 📚 Concats
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/pulls)
 
