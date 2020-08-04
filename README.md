@@ -30,11 +30,11 @@ This bot will show who invited who. It's recording and showing the total count o
 
 > Type `npm` to install the modules. *Discord if you have trouble just type `npm i discord.js`*
 
-![](https://resimler.aloshaplugins.com/resim/rvzrqt9mcm.png?raw=true "")
+![](https://resimler.aloshaplugins.com/resim/rvzrqt9mcm.png?raw=true)
 
 > To run the boat `node .` or `node index.js` write.
 
-![](https://resimler.aloshaplugins.com/resim/gdzy93hcqq.png?raw=true "")
+![](https://resimler.aloshaplugins.com/resim/gdzy93hcqq.png?raw=true)
 
 > After the installation, go into the `Settings` folder and then open the `Settings.json` file.
 
@@ -47,7 +47,7 @@ This bot will show who invited who. It's recording and showing the total count o
 
 
 ## 📚 Contact
-> You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/pulls)
+> You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/issues)
 
 
 
