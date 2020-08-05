@@ -90,7 +90,7 @@ client.on("guildMemberRemove", (member) => {
         regular = db.sub(`invites.${data.inviter}.regular`, 1);
         total = db.sub(`invites.${data.inviter}.total`, 1);
     }
-    if(data.inviter) bonus = db.get(`invites.${invite.inviter.id}.bonus`);
+    if(data.inviter) bonus = db.get(`invites.${data.inviter}.bonus`);
     
     var im = member.guild.member(data.inviter)
     if(im) global.onUpdateInvite(im, member.guild.id, total + bonus);
