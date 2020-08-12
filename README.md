@@ -52,4 +52,4 @@ This bot will show who invited who. It's recording and showing the total count o
 
 
 ## discord.gg/serendia
-## Discord: `Alosha#0001`
+## Discord: `Alosha#0777`
