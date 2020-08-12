@@ -54,7 +54,7 @@ This bot will show who invited who. It's recording and showing the total count o
 - `!options defaultMessage -member- join the server but from where?`
 
 
-## welcomeMessage Variables:
+### welcomeMessage Variables:
 
 - `-member-`: gives you the member\n
 - `-target-`: gives you the inviter\n
@@ -63,7 +63,7 @@ This bot will show who invited who. It's recording and showing the total count o
 - `-fakecount-` gives the inviter fake invites\n
 - `-fake-` indicates if the member is fake\n
 
-## leaveMessage Variables:
+### leaveMessage Variables:
 
 - `-member-`: gives you the member
 - `-target-`: gives you the inviter
@@ -72,11 +72,11 @@ This bot will show who invited who. It's recording and showing the total count o
 - `-fakecount-` gives the inviter fake invites
 - `-fake-` indicates if the member is fake
 
-## defaultMessage Variables:
+### defaultMessage Variables:
 
 - `-member-`: gives you the member
 
-## 📚 Contact
+# 📚 Contact
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/issues)
 
 
