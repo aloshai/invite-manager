@@ -44,7 +44,37 @@ This bot will show who invited who. It's recording and showing the total count o
     "Private_Server": true
 }
 
+# Options
 
+### Commands
+
+- `!options channel <channelId>`
+- `!options welcomeMessage -member- join the server! Inviter by -target-`
+- `!options leaveMessage -member- left the server! Inviter by <@-target->`
+- `!options defaultMessage -member- join the server but from where?`
+
+
+## welcomeMessage Variables:
+
+- `-member-`: gives you the member\n
+- `-target-`: gives you the inviter\n
+- `-total-`: the inviter all invitations of the invite\n
+- `-regular-`: gives the inviter real invitations\n
+- `-fakecount-` gives the inviter fake invites\n
+- `-fake-` indicates if the member is fake\n
+
+## leaveMessage Variables:
+
+- `-member-`: gives you the member
+- `-target-`: gives you the inviter
+- `-total-`: the inviter all invitations of the invite
+- `-regular-`: gives the inviter real invitations
+- `-fakecount-` gives the inviter fake invites
+- `-fake-` indicates if the member is fake
+
+## defaultMessage Variables:
+
+- `-member-`: gives you the member
 
 ## 📚 Contact
 > You want to help us develop this project? [Then give us an idea!](https://github.com/serendiasquad/invite-manager/issues)
