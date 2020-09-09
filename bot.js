@@ -28,7 +28,7 @@ client.on("inviteDelete", (invite) => {
 //#region Counter
 client.on("guildMemberAdd", (member) => {
     //const gi = new Collection().concat(Invites.get(member.guild.id));
-    const db = new Database("./Servers/" + member.guild.id, "Invites"), gi = Invites.get(member.guild.id).clone(), settings = new Database("./Servers/" + member.guild.id, "Settings").get("settings") || {};
+    const db = new Database("./Servers/" + member.guild.id, "Invites"), gi = Invites.get(member.guild.id).clone() || new Collection(), settings = new Database("./Servers/" + member.guild.id, "Settings").get("settings") || {};
     var guild = member.guild, fake = (Date.now() - member.createdAt) / (1000 * 60 * 60 * 24) <= 3 ? true : false, channel = guild.channels.cache.get(settings.Channel);
     
     guild.fetchInvites().then(invites => {
