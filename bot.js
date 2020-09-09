@@ -25,6 +25,16 @@ client.on("inviteDelete", (invite) => {
 });
 //#endregion
 
+//#region Continuity
+
+client.on("guildCreate", (guild) => {
+	guild.fetchInvites().then(invites => {
+		Invites.set(guild.id, invites);
+	}).catch(e => {})
+});
+
+//#endregion
+
 //#region Counter
 client.on("guildMemberAdd", (member) => {
     //const gi = new Collection().concat(Invites.get(member.guild.id));
