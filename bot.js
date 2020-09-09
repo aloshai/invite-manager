@@ -50,7 +50,7 @@ client.on("guildMemberAdd", (member) => {
                 regular = db.add(`invites.${invite.inviter.id}.regular`, 1);
             }
             var im = guild.member(invite.inviter.id);
-            bonus = db.get(`invites.${invite.inviter.id}.bonus`);
+            bonus = db.get(`invites.${invite.inviter.id}.bonus`) || 0;
             if(im) global.onUpdateInvite(im, guild.id, Number(total + Number(bonus)));
             
         }
@@ -91,17 +91,17 @@ client.on("guildMemberRemove", (member) => {
         regular = db.sub(`invites.${data.inviter}.regular`, 1);
         total = db.sub(`invites.${data.inviter}.total`, 1);
     }
-    if(data.inviter) bonus = db.get(`invites.${data.inviter}.bonus`);
+    if(data.inviter) bonus = db.get(`invites.${data.inviter}.bonus`) || 0;
     
     var im = member.guild.member(data.inviter)
-    if(im) global.onUpdateInvite(im, member.guild.id, total + bonus);
-    
+    if(im) global.onUpdateInvite(im, member.guild.id, Number(total) + Number(bonus));
+
     db.add(`invites.${data.inviter}.leave`, 1);
     if(channel){
         content = content
         .replace("-member-", `${member}`)
         .replace("-target-", `${im ? im : data.inviter}`)
-        .replace("-total-", `${total + bonus}`)
+        .replace("-total-", `${Number(total) + Number(bonus)}`)
         .replace("-regular-", `${regular}`)
         .replace("-fakecount-", `${fakecount}`)
         .replace("-fake-", `${data.isfake}`);
