@@ -14,12 +14,12 @@ client.on("ready", () => {
     });
 });
 client.on("inviteCreate", (invite) => {
-    var gi = Invites.get(invite.guild.id);
+    var gi = Invites.get(invite.guild.id) || new Collection();
     gi.set(invite.code, invite);
     Invites.set(invite.guild.id, gi);
 });
 client.on("inviteDelete", (invite) => {
-    var gi = Invites.get(invite.guild.id);
+    var gi = Invites.get(invite.guild.id) || new Collection();
     gi.delete(invite.code);
     Invites.set(invite.guild.id, gi);
 });
