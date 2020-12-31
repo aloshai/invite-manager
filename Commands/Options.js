@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
     var types = ["leaveMessage", "welcomeMessage", "Channel", "defaultMessage"];
 
     var type = types.find(_type => _type.toLocaleLowerCase() == arg);
-    if(!type) return message.reply("you can only use `leaveMessage`, `welcomeMessage`, `Channel` ve `defaultMessage` parameters.");
+    if(!type) return message.reply("you can only use `leaveMessage`, `welcomeMessage`, `Channel` and `defaultMessage` parameters.");
 
     const db = new Database("./Servers/" + message.guild.id, "Settings");
     db.set(`settings.${type}`, args.splice(1).join(" "));
